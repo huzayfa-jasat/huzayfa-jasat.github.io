@@ -629,6 +629,38 @@ body {
 }
 
 /*Projects Page*/
+/*Projects Page*/
+.projects-section {
+  display: flex;
+  flex-direction: column; /* Stacks the text and cards vertically */
+  align-items: center;    /* Centers the content horizontally */
+  gap: 20px;              /* Adds space between the text and the cards */
+  padding: 20px;
+}
+.projects__content h1{
+    background-color: #ff8177;
+    background-image: linear-gradient(to top,#ff0844 0%,#ffb199 100%);
+    background-size: 100%;
+    background-clip: text;
+    /* Include Fallback if Needed */
+    background-color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 2.5rem;
+}
+.projects__content p{
+    color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    -webkit-background-clip: text;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1.5rem;
+}
 .projects-container {
     display: flex;
     flex-wrap: wrap;
