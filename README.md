@@ -1,4 +1,4 @@
-**Personal Website**
+**Personal Website**  
 Welcome to my personal website! This site is designed to showcase my projects, skills, and professional experience. Built using JavaScript, HTML, and CSS, the website serves as an interactive platform where users 
 can explore my work in a visually engaging and responsive manner.
 
@@ -12,9 +12,9 @@ can explore my work in a visually engaging and responsive manner.
 - Mobile Compatibility: The design ensures a mobile-first approach, making sure the content is easy to explore on the go.
 
 **Technologies Used**
-HTML: Structured the content of the site with semantic elements.
-CSS: Styled the website with a focus on responsiveness and design aesthetics.
+HTML: Structured the content of the site with semantic elements.  
+CSS: Styled the website with a focus on responsiveness and design aesthetics.  
 JavaScript: Integrated dynamic elements, including transitions and interactions, to improve the user experience.
 
-**Getting Started**
+**Getting Started**  
 To view my website, simply visit huzayfa-jasat.github.io . You can also clone the repository to make changes or further develop the website for your needs.
