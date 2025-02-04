@@ -11,7 +11,7 @@ can explore my work in a visually engaging and responsive manner.
 
 - Mobile Compatibility: The design ensures a mobile-first approach, making sure the content is easy to explore on the go.
 
-**Technologies Used**
+**Technologies Used**  
 HTML: Structured the content of the site with semantic elements.  
 CSS: Styled the website with a focus on responsiveness and design aesthetics.  
 JavaScript: Integrated dynamic elements, including transitions and interactions, to improve the user experience.
