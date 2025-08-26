@@ -1,24 +1,20 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head> 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Huzayfa Jasat Website</title>
-        <link rel="stylesheet" href="styles.css">
-        <link  
-            rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/js/all.js" 
-            integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" 
-            crossorigin="anonymous"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">    </head>
-    <body>
-                <!--Navbar Section-->
-
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huzayfa Jasat - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="navbar__container">
-            <a href="/" id="navbar__logo"><i class="fas fa-gem"></i>  Huzayfa Jasat</a> 
+            <a href="#home" id="navbar__logo"><i class="fas fa-gem"></i> Huzayfa Jasat</a> 
             <div class="navbar__toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -26,65 +22,464 @@
             </div>
             <ul class="navbar__menu">
                 <li class="navbar__item">
-                    <a href="/" class="navbar__links">Home</a>
+                    <a href="#home" class="navbar__links">Home</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="/Projects.html" class="navbar__links">Projects</a>
+                    <a href="#about" class="navbar__links">About</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="Links.html" class="navbar__links">Links </a>
+                    <a href="#projects" class="navbar__links">Projects</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#skills" class="navbar__links">Skills</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#experience" class="navbar__links">Experience</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#contact" class="navbar__links">Contact</a>
                 </li>
                 <li class="navbar__btn">
-                    <a href="Contact.html" class="button">Contact Me</a>
+                    <a href="Huzayfa Jasat Resume.pdf" class="button" download>
+                        <i class="fas fa-download"></i> Resume
+                    </a>
                 </li>
             </ul>
         </div>
     </nav>
-        <!--Hero Section-->
-        <div class="main">
-            <div class="main__container">
-                <div class="main__content">
-                    <h1>HUZAYFA JASAT</h1>
-                    <p>See what makes me different</p>
-                    <button class="main__btn"><a href="Contact.html">Contact Me</a></button>                
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero__container">
+            <div class="hero__content">
+                <h1 class="hero__title">HUZAYFA JASAT</h1>
+                <p class="hero__subtitle">Mechatronics Engineer & Robotics Enthusiast</p>
+                <p class="hero__description">See what makes me different</p>
+                <div class="hero__buttons">
+                    <button class="main__btn" onclick="scrollToSection('contact')">
+                        <a href="#contact">Contact Me</a>
+                    </button>
+                    <button class="secondary__btn" onclick="scrollToSection('projects')">
+                        <a href="#projects">View Projects</a>
+                    </button>
                 </div>
-                <div class="main__img--container"><img src="images/pic4.svg" alt="pic" id="main__img">
+                <div class="hero__social">
+                    <a href="https://github.com/huzayfa-jasat" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/huzayfa-jasat/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="Huzayfa Jasat Resume.pdf" target="_blank" class="social-link" download>
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
                 </div>
             </div>
-        </div>
-
-        <!--About me Section-->
-        <div class="about-me">
-            <div class="about-me__container">
-                <div class="about-me__image">
-                    <img src="images/aboutme.jpg" alt="About Me Picture">
-                </div>
-                <div class="about-me__content">
-                    <h1>About Me</h1>
-                    <p>
-                        Hello! I'm Huzayfa Jasat, a passionate individual with a background in mechatronics engineering and robotics. My journey 
-                        involves crafting innovative projects like automated systems and exploring software development. I'm driven by curiosity 
-                        and a commitment to problem-solving. Let me share my work and ideas with you!
-                    </p>
-                </div>
+            <div class="hero__img--container">
+                <img src="images/pic4.svg" alt="Hero Image" id="hero__img">
             </div>
         </div>
-        
+    </section>
 
-        <!--Footer Section-->
-        <div class="footer__container">
-            <div class="footer__links">
-                <div class="footer__link--wrapper">
-                    <div class="footer__link--items">
-                        <h2>Quick Links</h2>
-                        <a href="/">Home</a>
-                        <a href="/Projects.html">Projects</a>
-                        <a href="Contact.html">Contact</a>
+    <!-- About Section -->
+    <section id="about" class="about-me">
+        <div class="about-me__container">
+            <div class="about-me__image">
+                <img src="images/aboutme.jpg" alt="About Me Picture">
+            </div>
+            <div class="about-me__content">
+                <h2>About Me</h2>
+                <p>
+                    Hello! I'm Huzayfa Jasat, a passionate individual with a background in mechatronics engineering and robotics. My journey 
+                    involves crafting innovative projects like automated systems and exploring software development. I'm driven by curiosity 
+                    and a commitment to problem-solving. Let me share my work and ideas with you!
+                </p>
+                <div class="about-me__stats">
+                    <div class="stat">
+                        <h3>5+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat">
+                        <h3>2+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100%</h3>
+                        <p>Satisfaction Rate</p>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <script src="app.js"></script>
-    </body>
-    </html>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="projects__container">
+            <h2>My Projects</h2>
+            <div class="projects__slideshow">
+                <div class="slideshow-container">
+
+                    <div class="slide" data-slide="0">
+                        <div class="project-content">
+                            <div class="project-image">
+                                <img src="images/NearU.png" alt="NearU App">
+                            </div>
+                            <div class="project-details">
+                                <h3>NearU App</h3>
+                                <p>
+                                    NearU is a Progressive Web App (PWA) designed for University of Waterloo students to enhance campus social networking. The application enables users to discover and connect with others within a 500-meter radius through real-time location tracking and instant messaging capabilities. Built using React with TypeScript for robust type safety and Firebase for backend services, the app ensures fast, reliable communication and seamless user experience. The project successfully grew to nearly 200 user sign-ups, demonstrating strong adoption and engagement within the university community. Key features include geolocation-based user discovery, real-time chat functionality, and PWA capabilities for native app-like experience across all devices.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Full Stack</span>
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">TypeScript</span>
+                                    <span class="tech-tag">Firebase</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="slide" data-slide="1">
+                        <div class="project-content">
+                            <div class="project-image">
+                                <img src="images/pushblock.png" alt="PushBlock">
+                            </div>
+                            <div class="project-details">
+                                <h3>PushBlock (1st Place at GenAI Genesis)</h3>
+                                <p>
+                                    PushBlock is an innovative Chrome extension that combines website blocking with physical exercise motivation, winning 1st place in Best Healthcare Hack and 2nd Overall among 150+ submissions at GenAI Genesis. The extension blocks distracting websites and requires users to complete pushups before unlocking restricted sites, using computer vision technology for exercise detection. Built with HTML, CSS, and JavaScript for the frontend, the system integrates OpenCV and MediaPipe for real-time pushup detection, achieving 95% accuracy in exercise recognition. A Flask backend seamlessly connects with the JavaScript frontend, reducing page load latency by 40% and ensuring smooth user experience. This unique approach to digital wellness promotes healthy habits while maintaining productivity, demonstrating the potential of AI-driven health interventions.                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Full Stack</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">OpenCV</span>
+                                    <span class="tech-tag">MediaPipe</span>
+                                    <span class="tech-tag">Flask</span>
+                                    <span class="tech-tag">Computer Vision</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide" data-slide="2">
+                        <div class="project-content">
+                            <div class="project-image">
+                                <img src="images/code-optimizer.png" alt="AI Powered Code Optimizer">
+                            </div>
+                            <div class="project-details">
+                                <h3>AI Powered Code Optimizer</h3>
+                                <p>
+                                    The AI Powered Code Optimizer is an intelligent development tool that revolutionizes code performance analysis through AI integration. Built with Python and Streamlit, it provides an interactive UI that automates performance analysis and reduces manual debugging effort by 60%. The system leverages Google Gemini API to optimize code execution, achieving 82% reduction in execution time and 40% improvement in memory usage while maintaining functionality across 100+ test cases. The Matplotlib visualization dashboard generates dynamic performance graphs, accelerating optimization insights by 3x compared to traditional methods.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Streamlit</span>
+                                    <span class="tech-tag">Google Gemini API</span>
+                                    <span class="tech-tag">Matplotlib</span>
+                                    <span class="tech-tag">AI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide" data-slide="3">
+                        <div class="project-content">
+                            <div class="project-image">
+                                <img src="images/Project1.jpg" alt="Automated Pet Feeder">
+                            </div>
+                            <div class="project-details">
+                                <h3>Automated Pet Feeder</h3>
+                                <p>
+                                    The Automated Pet Feeder, developed using EV3 Robotics and programmed in RobotC, is a sophisticated solution designed to streamline pet care. This innovative device utilizes ultrasonic and sound sensors to accurately differentiate between cats and dogs, rotating a turntable to dispense a pre-set amount of food tailored to the identified pet. User-programmed feeding intervals ensure proper nutrition schedules, while real-time checks for empty hoppers maintain continuous functionality, reducing downtime by 20%. With 98% accuracy in distinguishing between pet types during rigorous testing and over 40 trials conducted to optimize the dispensing mechanism, the feeder achieved a 15% reduction in food waste, showcasing its efficiency and reliability.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">EV3 Robotics</span>
+                                    <span class="tech-tag">RobotC</span>
+                                    <span class="tech-tag">Sensors</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide" data-slide="4">
+                        <div class="project-content">
+                            <div class="project-image">
+                                <img src="images/Project2.png" alt="Smart Walking Stick">
+                            </div>
+                            <div class="project-details">
+                                <h3>Smart Walking Stick</h3>
+                                <p>
+                                    The Motion Detecting Walking Stick, developed using TinkerCAD and Arduino, is designed to enhance mobility for individuals with visual impairments. This innovative device integrates motion sensors and vibration components to alert users of nearby obstacles, triggering real-time feedback within 0.5 seconds. With three motion sensors covering a 180-degree detection range, the walking stick ensures comprehensive obstacle detection, achieving a 95% accuracy rate after over 50 calibration tests. Additionally, depending on which sensor detects an obstacle within 1 meter, the device emits distinct sounds to inform the user of the obstacle's direction, further improving situational awareness and safety.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Arduino</span>
+                                    <span class="tech-tag">TinkerCAD</span>
+                                    <span class="tech-tag">Motion Sensors</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slideshow-controls">
+                    <button class="prev-btn" onclick="changeSlide(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="dots">
+                        <span class="dot active" onclick="currentSlide(0)"></span>
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                    </div>
+                    <button class="next-btn" onclick="changeSlide(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="skills__container">
+            <h2>Skills & Technologies</h2>
+            <div class="skills__grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">ROS</span>
+                        <span class="skill-tag">Bash</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">Knex</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">MediaPipe</span>
+                        <span class="skill-tag">Matplotlib</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Hardware & Robotics</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Arduino</span>
+                        <span class="skill-tag">EV3 Robotics</span>
+                        <span class="skill-tag">TinkerCAD</span>
+                        <span class="skill-tag">SolidWorks</span>
+                        <span class="skill-tag">STM32</span>
+                        <span class="skill-tag">AutoCAD</span>
+                        <span class="skill-tag">Raspberry Pi</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Tools & Software</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">Adminer</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>AI & Machine Learning</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">Google Gemini API</span>
+                        <span class="skill-tag">Pose Detection</span>
+                        <span class="skill-tag">Real-time Processing</span>
+                        <span class="skill-tag">Performance Optimization</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Firebase</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="experience__container">
+            <h2>Experience & Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Expected Graduation: April 2029</div>
+                        <h3>University of Waterloo</h3>
+                        <p>Bachelor of Applied Science in Mechatronics Engineering — Academic Representative</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">May 2025 - August 2025</div>
+                        <h3>Backend Software Engineering Intern</h3>
+                        <div class="timeline-company">Levanta Labs • Ranked: Excellent</div>
+                        <p>Built and maintained RESTful APIs using Node.js, Express.js, and PostgreSQL, powering backend services for 7+ startups and reducing request latency by 25%. Implemented email and payment flows using Knex.js, Redis, Stripe, and Resend, increasing system reliability by 30% and supporting seamless onboarding for high-growth startup clients. Automated data workflows using Python and external APIs, deployed Bash scripts via AWS, and containerized services with Docker, boosting task efficiency by 35%. Developed 75+ backend endpoints with authentication flows including 2FA and magic link verification.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express.js</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Knex.js</span>
+                            <span class="tag">Redis</span>
+                            <span class="tag">Stripe</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Bash</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Jan. 2025 – Present</div>
+                        <h3>Software Engineer</h3>
+                        <p>Developed control methods and motor coordination strategies for humanoid robots to improve movement. Improved real-time sensor-to-motor data transfer using ROS and Docker, enhancing responsiveness. Analyzed and debugged controller communication (CAN bus) to ensure reliable sensor-actuator coordination.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">ROS</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">CAN Bus</span>
+                            <span class="tag">Humanoid Robotics</span>
+                            <span class="tag">Motor Control</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Sep. 2024 – Present</div>
+                        <h3>Software Engineer</h3>
+                        <p>Developed a C++ CLI command to clear motor controller faults via CAN, reducing troubleshooting time by 30%. Designed and deployed fault-clear functionality in EV motor diagnostics to automate fault recovery, achieving a 95% success rate in HIL simulations and slashing manual debugging time by 40%. Refined PID control loops to address motor inefficiencies, boosting motor efficiency by 10%. Debugged STM32 microcontroller firmware during vehicle tests, enhancing motor response accuracy and reliability.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">C++</span>
+                            <span class="tag">STM32</span>
+                            <span class="tag">CAN Bus</span>
+                            <span class="tag">PID Control</span>
+                            <span class="tag">EV Motor Diagnostics</span>
+                            <span class="tag">HIL Simulations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact__container">
+            <h2>Get In Touch</h2>
+            <div class="contact__content">
+                <div class="contact__info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
+                    
+                    <div class="contact__links">
+                        <a href="https://github.com/huzayfa-jasat" target="_blank" class="contact-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/huzayfa-jasat/" target="_blank" class="contact-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="Huzayfa Jasat Resume.pdf" target="_blank" class="contact-link" download>
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Download Resume</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm" method="POST">
+                    <input type="hidden" name="access_key" value="e2246ece-9faa-449f-9420-63378e56b97f">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                    
+                    <div id="result" class="form-result"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3>Huzayfa Jasat</h3>
+                    <p>Mechatronics Engineer & Robotics Enthusiast</p>
+                </div>
+                <div class="footer__section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4>Connect</h4>
+                    <div class="footer__social">
+                        <a href="https://github.com/huzayfa-jasat" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/huzayfa-jasat/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 Huzayfa Jasat. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
