@@ -26,12 +26,12 @@ export const PROFILE: Profile = {
   name: 'Huzayfa Jasat',
   title: 'Software Engineer',
   stats: {
-    Frontend: 95,
-    Backend: 88,
-    '3D/Graphics': 90,
-    Systems: 85,
-    Teamwork: 94,
-    Overall: 92,
+    Frontend: 99,
+    Backend: 99,
+    Infrastructure: 99,
+    'Embedded/IoT': 99,
+    'UI/UX Design': 99,
+    Overall: 99,
   },
   skills: [
     'React', 'TypeScript', 'Three.js', 'Python',
