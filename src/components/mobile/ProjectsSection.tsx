@@ -71,12 +71,17 @@ function ProjectCard({ project, index }: { project: typeof PROJECTS[0]; index: n
 
 export default function ProjectsSection() {
   const { theme } = useArenaTheme()
+  const bannerRef = useScrollAnimation<HTMLDivElement>()
 
   return (
     <section className={style.section}>
-      <p className={style.sectionLabel} style={{ color: theme.accentColor }}>
-        PROJECTS
-      </p>
+      <div ref={bannerRef} className={`${style.banner} animate-fade-up`}>
+        <div className={style.bannerLine} style={{ background: theme.accentColor }} />
+        <h2 className={style.bannerTitle} style={{ color: theme.accentColor }}>
+          PROJECTS
+        </h2>
+        <div className={style.bannerLine} style={{ background: theme.accentColor }} />
+      </div>
       {PROJECTS.map((project, i) => (
         <ProjectCard key={project.name} project={project} index={i} />
       ))}

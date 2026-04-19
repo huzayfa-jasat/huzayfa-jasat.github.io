@@ -4,7 +4,7 @@ import { useScroll } from '@react-three/drei'
 import * as THREE from 'three'
 import { setScrollProgress } from '../hooks/useScrollStore'
 
-const TUNNEL_LENGTH = 85
+const TUNNEL_LENGTH = 95
 const CAMERA_Y = 1.6
 const CAMERA_START_Z = 2
 const CAMERA_END_Z = -TUNNEL_LENGTH + 5

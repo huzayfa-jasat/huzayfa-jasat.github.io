@@ -2,12 +2,27 @@
   padding: 60px 24px;
 }
 
-.sectionLabel {
+.banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.bannerLine {
+  flex: 1;
+  height: 1px;
+  opacity: 0.3;
+}
+
+.bannerTitle {
   font-family: 'Orbitron', sans-serif;
-  font-size: 10px;
+  font-size: 14px;
+  font-weight: 700;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  margin-bottom: 32px;
+  white-space: nowrap;
+  margin: 0;
 }
 
 .card {
@@ -16,16 +31,6 @@
   padding: 24px 20px;
   margin-bottom: 24px;
   background: rgba(5, 5, 16, 0.8);
-}
-
-.achievement {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 9px;
-  letter-spacing: 0.1em;
-  padding: 4px 12px;
-  border-radius: 2px;
-  display: inline-block;
-  margin-bottom: 12px;
 }
 
 .projectName {

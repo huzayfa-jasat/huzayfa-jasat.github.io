@@ -8,12 +8,13 @@ import ExperiencePanel from './panels/TeslaPanel'
 import ProjectPanel from './panels/ProjectPanel'
 import ArenaDestination from './arena/ArenaDestination'
 import InfoHint from './panels/InfoHint'
+import SectionBanner from './panels/SectionBanner'
 import { EXPERIENCES, PROJECTS } from '../data/content'
 import { TUNNEL_WIDTH } from './tunnel/TunnelGeometry'
 
-const EXPERIENCE_START_Z = -18
+const EXPERIENCE_START_Z = -26
 const EXPERIENCE_SPACING = 8
-const PROJECT_Z = -46
+const PROJECT_Z = -54
 
 export default function TunnelScene() {
   return (
@@ -25,7 +26,10 @@ export default function TunnelScene() {
       <HologramCard />
 
       {/* Info hint — between scouting card and first experience */}
-      <InfoHint position={[0, 2.8, -13]} />
+      <InfoHint position={[0, 2.8, -14]} />
+
+      {/* Section banner — Experience */}
+      <SectionBanner position={[0, 3.5, -22]} text="EXPERIENCE" />
 
       {/* Experience panels — alternating walls */}
       {EXPERIENCES.map((exp, i) => (
@@ -40,6 +44,9 @@ export default function TunnelScene() {
           rotation={[0, i % 2 === 0 ? Math.PI / 2 : -Math.PI / 2, 0]}
         />
       ))}
+
+      {/* Section banner — Projects */}
+      <SectionBanner position={[0, 3.5, -50]} text="PROJECTS" />
 
       {/* Project panels — alternating walls */}
       {PROJECTS.map((project, i) => (

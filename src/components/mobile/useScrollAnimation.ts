@@ -18,7 +18,8 @@ export function useScrollAnimation<T extends HTMLElement>(
       ([entry]) => {
         if (entry.isIntersecting) {
           el.classList.add('animate-in')
-          observer.unobserve(el)
+        } else {
+          el.classList.remove('animate-in')
         }
       },
       {

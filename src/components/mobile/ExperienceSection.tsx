@@ -39,11 +39,17 @@ function ExperienceCard({ experience, index }: { experience: typeof EXPERIENCES[
 export default function ExperienceSection() {
   const { theme } = useArenaTheme()
 
+  const bannerRef = useScrollAnimation<HTMLDivElement>()
+
   return (
     <section className={style.section}>
-      <p className={style.sectionLabel} style={{ color: theme.accentColor }}>
-        EXPERIENCE
-      </p>
+      <div ref={bannerRef} className={`${style.banner} animate-fade-up`}>
+        <div className={style.bannerLine} style={{ background: theme.accentColor }} />
+        <h2 className={style.bannerTitle} style={{ color: theme.accentColor }}>
+          EXPERIENCE
+        </h2>
+        <div className={style.bannerLine} style={{ background: theme.accentColor }} />
+      </div>
       {EXPERIENCES.map((exp, i) => (
         <ExperienceCard key={exp.company} experience={exp} index={i} />
       ))}
