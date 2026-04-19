@@ -1,0 +1,81 @@
+.section {
+  padding: 60px 24px;
+}
+
+.sectionLabel {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.card {
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 24px 20px;
+  margin-bottom: 24px;
+  background: rgba(5, 5, 16, 0.8);
+}
+
+.achievement {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  padding: 4px 12px;
+  border-radius: 2px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.projectName {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 4px;
+}
+
+.tagline {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 16px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tag {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+.links {
+  display: flex;
+  gap: 12px;
+}
+
+.link {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  padding: 6px 14px;
+  border: 1px solid;
+  border-radius: 2px;
+  transition: background 0.2s ease;
+}
