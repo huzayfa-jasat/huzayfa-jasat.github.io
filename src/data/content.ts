@@ -1,7 +1,8 @@
 export interface Profile {
   name: string
   title: string
-  stats: Record<string, number>
+  overall: number
+  details: { label: string; value: string }[]
   skills: string[]
 }
 
@@ -25,14 +26,15 @@ export interface Project {
 export const PROFILE: Profile = {
   name: 'Huzayfa Jasat',
   title: 'Software Engineer',
-  stats: {
-    Frontend: 99,
-    Backend: 99,
-    Infrastructure: 99,
-    'Embedded/IoT': 99,
-    'UI/UX Design': 99,
-    Overall: 99,
-  },
+  overall: 99,
+  details: [
+    { label: 'Position', value: 'Mechatronics Engineering' },
+    { label: 'Program', value: 'University of Waterloo' },
+    { label: 'Languages', value: 'Python · Java · C++ · TypeScript · JavaScript · HTML/CSS' },                                                                     
+    { label: 'Frameworks', value: 'React · Flask · Node.js · Three.js · ROS' },                                                                                 
+    { label: 'Tools', value: 'PostgreSQL · MySQL · Redis · Firebase · AWS · Docker'},      
+    { label: 'Stats', value: '3 Internships · 5+ Projects · 200+ Users' },
+  ],
   skills: [
     'React', 'TypeScript', 'Three.js', 'Python',
     'Node.js', 'C++', 'Docker', 'AWS',

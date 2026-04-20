@@ -6,11 +6,9 @@ import { useArenaTheme } from '../../context/ArenaThemeContext'
 import { PROFILE } from '../../data/content'
 import './HologramMaterial'
 
-const CARD_WIDTH = 2.4
-const CARD_HEIGHT = 3.2
+const CARD_WIDTH = 3.2
+const CARD_HEIGHT = 4.6
 const CARD_Z = -8
-
-const STAT_ENTRIES = Object.entries(PROFILE.stats)
 
 export default function HologramCard() {
   const groupRef = useRef<THREE.Group>(null)
@@ -74,8 +72,8 @@ export default function HologramCard() {
 
       {/* Header: SCOUTING REPORT */}
       <Text
-        position={[0, CARD_HEIGHT / 2 - 0.25, 0.02]}
-        fontSize={0.12}
+        position={[0, CARD_HEIGHT / 2 - 0.3, 0.02]}
+        fontSize={0.14}
         color={theme.accentColor}
         anchorX="center"
         anchorY="middle"
@@ -86,8 +84,8 @@ export default function HologramCard() {
 
       {/* Name */}
       <Text
-        position={[0, CARD_HEIGHT / 2 - 0.55, 0.02]}
-        fontSize={0.22}
+        position={[0, CARD_HEIGHT / 2 - 0.65, 0.02]}
+        fontSize={0.26}
         color="#ffffff"
         anchorX="center"
         anchorY="middle"
@@ -97,8 +95,8 @@ export default function HologramCard() {
 
       {/* Title */}
       <Text
-        position={[0, CARD_HEIGHT / 2 - 0.8, 0.02]}
-        fontSize={0.1}
+        position={[0, CARD_HEIGHT / 2 - 0.95, 0.02]}
+        fontSize={0.12}
         color={theme.accentColor}
         anchorX="center"
         anchorY="middle"
@@ -108,25 +106,25 @@ export default function HologramCard() {
       </Text>
 
       {/* Divider line */}
-      <mesh position={[0, CARD_HEIGHT / 2 - 1.0, 0.02]}>
+      <mesh position={[0, CARD_HEIGHT / 2 - 1.15, 0.02]}>
         <planeGeometry args={[CARD_WIDTH - 0.4, 0.005]} />
         <meshBasicMaterial color={theme.accentColor} transparent opacity={0.4} />
       </mesh>
 
       {/* Overall rating — large number */}
       <Text
-        position={[0, CARD_HEIGHT / 2 - 1.3, 0.02]}
-        fontSize={0.5}
+        position={[0, CARD_HEIGHT / 2 - 1.55, 0.02]}
+        fontSize={0.6}
         color="#ffffff"
         anchorX="center"
         anchorY="middle"
       >
-        {PROFILE.stats.Overall.toString()}
+        {PROFILE.overall.toString()}
       </Text>
 
       <Text
-        position={[0, CARD_HEIGHT / 2 - 1.6, 0.02]}
-        fontSize={0.08}
+        position={[0, CARD_HEIGHT / 2 - 1.9, 0.02]}
+        fontSize={0.09}
         color="rgba(255,255,255,0.5)"
         anchorX="center"
         anchorY="middle"
@@ -135,44 +133,32 @@ export default function HologramCard() {
         OVERALL
       </Text>
 
-      {/* Individual stats */}
-      {STAT_ENTRIES.filter(([key]) => key !== 'Overall').map(([label, value], i) => {
-        const y = CARD_HEIGHT / 2 - 2.0 - i * 0.2
-        const barWidth = CARD_WIDTH - 0.6
-        const fillWidth = (value / 100) * barWidth
+      {/* Detail rows */}
+      {PROFILE.details.map((detail, i) => {
+        const y = CARD_HEIGHT / 2 - 2.3 - i * 0.32
         return (
-          <group key={label} position={[-CARD_WIDTH / 2 + 0.3, y, 0.12]}>
+          <group key={detail.label} position={[-CARD_WIDTH / 2 + 0.3, y, 0.12]}>
             <Text
               position={[0, 0, 0]}
-              fontSize={0.07}
-              color="rgba(255,255,255,0.7)"
+              fontSize={0.08}
+              color={theme.accentColor}
               anchorX="left"
               anchorY="middle"
-              letterSpacing={0.1}
+              letterSpacing={0.12}
               material-alphaTest={0.5}
             >
-              {label.toUpperCase()}
+              {detail.label.toUpperCase()}
             </Text>
             <Text
-              position={[barWidth, 0, 0]}
-              fontSize={0.07}
-              color="#ffffff"
-              anchorX="right"
+              position={[0, -0.15, 0]}
+              fontSize={0.1}
+              color="rgba(255,255,255,0.85)"
+              anchorX="left"
               anchorY="middle"
               material-alphaTest={0.5}
             >
-              {value.toString()}
+              {detail.value}
             </Text>
-            {/* Bar background */}
-            <mesh position={[barWidth / 2, -0.09, 0]}>
-              <planeGeometry args={[barWidth, 0.04]} />
-              <meshBasicMaterial color="#ffffff" transparent opacity={0.1} />
-            </mesh>
-            {/* Bar fill */}
-            <mesh position={[fillWidth / 2, -0.09, 0.001]}>
-              <planeGeometry args={[fillWidth, 0.04]} />
-              <meshBasicMaterial color={theme.accentColor} transparent opacity={0.3} />
-            </mesh>
           </group>
         )
       })}

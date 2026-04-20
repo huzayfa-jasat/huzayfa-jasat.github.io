@@ -50,24 +50,29 @@ export default function PanelScreen({
       return
     }
 
-    // Compute camera position: 3 units in front of the panel face
-    const [px, py, pz] = position
-    const ry = rotation[1]
+    if (!groupRef.current) return
 
-    // Panel normal direction based on Y rotation
+    const worldPos = new THREE.Vector3()
+    groupRef.current.getWorldPosition(worldPos)
+
+    const worldQuat = new THREE.Quaternion()
+    groupRef.current.getWorldQuaternion(worldQuat)
+    const euler = new THREE.Euler().setFromQuaternion(worldQuat)
+    const ry = euler.y
+
     const normalX = Math.sin(ry)
     const normalZ = Math.cos(ry)
     const dist = 3
 
     const cameraPos: [number, number, number] = [
-      px + normalX * dist,
-      py,
-      pz + normalZ * dist,
+      worldPos.x + normalX * dist,
+      worldPos.y,
+      worldPos.z + normalZ * dist,
     ]
-    const lookAt: [number, number, number] = [px, py, pz]
+    const lookAt: [number, number, number] = [worldPos.x, worldPos.y, worldPos.z]
 
     focusPanel(cameraPos, lookAt)
-  }, [position, rotation])
+  }, [])
 
   return (
     <group ref={groupRef} position={position} rotation={rotation}>

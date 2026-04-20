@@ -9,6 +9,7 @@ import ProjectPanel from './panels/ProjectPanel'
 import ArenaDestination from './arena/ArenaDestination'
 import InfoHint from './panels/InfoHint'
 import SectionBanner from './panels/SectionBanner'
+import SlidingPanel from './panels/SlidingPanel'
 import { EXPERIENCES, PROJECTS } from '../data/content'
 import { TUNNEL_WIDTH } from './tunnel/TunnelGeometry'
 
@@ -31,36 +32,42 @@ export default function TunnelScene() {
       {/* Section banner — Experience */}
       <SectionBanner position={[0, 3.5, -22]} text="EXPERIENCE" />
 
-      {/* Experience panels — alternating walls */}
-      {EXPERIENCES.map((exp, i) => (
-        <ExperiencePanel
-          key={exp.company}
-          experience={exp}
-          position={[
-            i % 2 === 0 ? -TUNNEL_WIDTH / 2 + 0.1 : TUNNEL_WIDTH / 2 - 0.1,
-            2.2,
-            EXPERIENCE_START_Z - i * EXPERIENCE_SPACING,
-          ]}
-          rotation={[0, i % 2 === 0 ? Math.PI / 2 : -Math.PI / 2, 0]}
-        />
-      ))}
+      {/* Experience panels — slide from wall to center on approach */}
+      {EXPERIENCES.map((exp, i) => {
+        const isLeft = i % 2 === 0
+        const wallX = isLeft ? -TUNNEL_WIDTH / 2 + 0.1 : TUNNEL_WIDTH / 2 - 0.1
+        const wallRotY = isLeft ? Math.PI / 2 : -Math.PI / 2
+        const z = EXPERIENCE_START_Z - i * EXPERIENCE_SPACING
+        return (
+          <SlidingPanel key={exp.company} wallX={wallX} wallRotationY={wallRotY} y={2.2} z={z}>
+            <ExperiencePanel
+              experience={exp}
+              position={[0, 0, 0]}
+              rotation={[0, 0, 0]}
+            />
+          </SlidingPanel>
+        )
+      })}
 
       {/* Section banner — Projects */}
       <SectionBanner position={[0, 3.5, -50]} text="PROJECTS" />
 
-      {/* Project panels — alternating walls */}
-      {PROJECTS.map((project, i) => (
-        <ProjectPanel
-          key={project.name}
-          project={project}
-          position={[
-            i % 2 === 0 ? -TUNNEL_WIDTH / 2 + 0.1 : TUNNEL_WIDTH / 2 - 0.1,
-            2.2,
-            PROJECT_Z - i * 6,
-          ]}
-          rotation={[0, i % 2 === 0 ? Math.PI / 2 : -Math.PI / 2, 0]}
-        />
-      ))}
+      {/* Project panels — slide from wall to center on approach */}
+      {PROJECTS.map((project, i) => {
+        const isLeft = i % 2 === 0
+        const wallX = isLeft ? -TUNNEL_WIDTH / 2 + 0.1 : TUNNEL_WIDTH / 2 - 0.1
+        const wallRotY = isLeft ? Math.PI / 2 : -Math.PI / 2
+        const z = PROJECT_Z - i * 6
+        return (
+          <SlidingPanel key={project.name} wallX={wallX} wallRotationY={wallRotY} y={2.2} z={z}>
+            <ProjectPanel
+              project={project}
+              position={[0, 0, 0]}
+              rotation={[0, 0, 0]}
+            />
+          </SlidingPanel>
+        )
+      })}
 
       {/* Hint — after projects, before arena */}
       <InfoHint position={[0, 2.8, PROJECT_Z - PROJECTS.length * 6 - 3]} text="SCROLL TO THE END" />

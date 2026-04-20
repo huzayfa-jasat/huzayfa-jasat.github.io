@@ -3,8 +3,6 @@ import { PROFILE } from '../../data/content'
 import { useScrollAnimation } from './useScrollAnimation'
 import style from './ScoutingSection.module.css'
 
-const STAT_ENTRIES = Object.entries(PROFILE.stats).filter(([key]) => key !== 'Overall')
-
 export default function ScoutingSection() {
   const { theme } = useArenaTheme()
   const ref = useScrollAnimation<HTMLDivElement>()
@@ -29,24 +27,15 @@ export default function ScoutingSection() {
 
         <div className={style.divider} style={{ background: theme.accentColor }} />
 
-        <div className={style.overallScore}>{PROFILE.stats.Overall}</div>
+        <div className={style.overallScore}>{PROFILE.overall}</div>
         <div className={style.overallLabel}>OVERALL</div>
 
-        {STAT_ENTRIES.map(([label, value]) => (
-          <div key={label}>
-            <div className={style.statRow}>
-              <span className={style.statLabel}>{label.toUpperCase()}</span>
-              <span className={style.statValue}>{value}</span>
-            </div>
-            <div className={style.barTrack}>
-              <div
-                className={style.barFill}
-                style={{
-                  width: `${value}%`,
-                  background: theme.accentColor,
-                }}
-              />
-            </div>
+        {PROFILE.details.map((detail) => (
+          <div key={detail.label} className={style.detailRow}>
+            <span className={style.detailLabel} style={{ color: theme.accentColor }}>
+              {detail.label.toUpperCase()}
+            </span>
+            <span className={style.detailValue}>{detail.value}</span>
           </div>
         ))}
       </div>

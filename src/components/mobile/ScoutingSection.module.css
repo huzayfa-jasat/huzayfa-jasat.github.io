@@ -84,38 +84,23 @@
   margin-bottom: 20px;
 }
 
-.statRow {
+.detailRow {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 8px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: clamp(10px, 2.8vw, 12px);
-  letter-spacing: 0.1em;
-}
-
-.statLabel {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.statValue {
-  color: #fff;
-  font-weight: 600;
-}
-
-.barTrack {
-  width: 100%;
-  height: 4px;
-  background: rgba(255, 255, 255, 0.1);
-  margin-top: 2px;
+  flex-direction: column;
+  gap: 2px;
   margin-bottom: 14px;
-  border-radius: 2px;
-  position: relative;
 }
 
-.barFill {
-  height: 100%;
-  border-radius: 2px;
-  opacity: 0.5;
-  transition: width 1s ease;
+.detailLabel {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(9px, 2.5vw, 10px);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.detailValue {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(13px, 3.5vw, 15px);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.4;
 }

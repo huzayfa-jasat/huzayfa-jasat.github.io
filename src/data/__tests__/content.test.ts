@@ -6,8 +6,8 @@ describe('Portfolio content', () => {
   it('has complete profile', () => {
     expect(PROFILE.name).toBe('Huzayfa Jasat')
     expect(PROFILE.title).toBe('Software Engineer')
-    expect(PROFILE.stats).toBeDefined()
-    expect(Object.keys(PROFILE.stats).length).toBeGreaterThanOrEqual(5)
+    expect(PROFILE.overall).toBe(99)
+    expect(PROFILE.details.length).toBeGreaterThanOrEqual(3)
   })
 
   it('has Tesla experience', () => {
