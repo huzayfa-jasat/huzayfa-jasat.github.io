@@ -8,6 +8,7 @@ import NameOverlay from './components/ui/NameOverlay'
 import ScrollPrompt from './components/ui/ScrollPrompt'
 import LoadingScreen from './components/ui/LoadingScreen'
 import SectionNav from './components/ui/SectionNav'
+import MinigameHUD from './components/ui/MinigameHUD'
 import { scrollToSection, unfocusPanel } from './components/ScrollCamera'
 import { SECTIONS } from './hooks/useSectionNav'
 import { getScrollProgress } from './hooks/useScrollStore'
@@ -68,6 +69,7 @@ export default function App() {
       <ArenaToggle />
       <NameOverlay />
       <ScrollPrompt />
+      <MinigameHUD />
       <SectionNav onNavigate={handleNavigate} />
       <div className="canvas-container">
         <Canvas

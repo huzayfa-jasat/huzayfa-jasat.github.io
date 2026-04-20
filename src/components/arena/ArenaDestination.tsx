@@ -6,6 +6,7 @@ import BasketballCourt from './BasketballCourt'
 import BaseballDiamond from './BaseballDiamond'
 import SoccerField from './SoccerField'
 import FootballField from './FootballField'
+import MinigameController from '../minigame/MinigameController'
 
 const ARENA_COMPONENTS = {
   Hockey: IceRink,
@@ -25,6 +26,7 @@ export default function ArenaDestination() {
   return (
     <group position={[0, 0, -TUNNEL_LENGTH - 20]}>
       <ArenaComponent />
+      <MinigameController />
     </group>
   )
 }
