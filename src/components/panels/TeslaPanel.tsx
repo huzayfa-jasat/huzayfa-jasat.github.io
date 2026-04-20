@@ -73,10 +73,10 @@ export default function ExperiencePanel({ experience, position, rotation }: Expe
         <group key={i} position={[-PANEL_WIDTH / 2 + 0.3, -0.15 - i * 0.28, 0]}>
           <Text
             position={[0, 0, 0]}
-            fontSize={0.06}
+            fontSize={0.065}
             color={theme.accentColor}
             anchorX="left"
-            anchorY="middle"
+            anchorY="top"
           >
             ▸
           </Text>

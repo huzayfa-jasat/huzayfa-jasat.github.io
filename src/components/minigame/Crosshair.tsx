@@ -3,6 +3,7 @@ import { useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 import { useArenaTheme } from '../../context/ArenaThemeContext'
 import { SPORT_CONFIGS } from '../../data/sportConfigs'
+import { isHoveringUI } from '../../hooks/useMinigameStore'
 import { TUNNEL_LENGTH } from '../ScrollCamera'
 
 const raycaster = new THREE.Raycaster()
@@ -30,6 +31,11 @@ export default function Crosshair() {
 
   useFrame(() => {
     if (!groupRef.current) return
+    if (isHoveringUI()) {
+      groupRef.current.visible = false
+      return
+    }
+    groupRef.current.visible = true
     raycaster.setFromCamera(mouseRef.current, camera)
     const worldTargetZ = ARENA_Z + config.target.position[2]
     aimPlane.constant = -worldTargetZ

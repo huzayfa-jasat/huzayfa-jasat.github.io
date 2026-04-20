@@ -74,8 +74,8 @@ export default function ScrollCamera() {
       scroll.el.style.overflow = 'hidden'
       scroll.el.style.pointerEvents = 'none'
     } else if (!minigame.active && scroll.el.style.overflow === 'hidden') {
-      scroll.el.style.overflow = ''
-      scroll.el.style.pointerEvents = ''
+      scroll.el.style.overflow = 'auto'
+      scroll.el.style.pointerEvents = 'auto'
     }
 
     if (_focusTarget) {

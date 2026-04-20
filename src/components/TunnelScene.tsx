@@ -26,8 +26,7 @@ export default function TunnelScene() {
       <NeonStrips />
       <HologramCard />
 
-      {/* Info hint — between scouting card and first experience */}
-      <InfoHint position={[0, 2.8, -14]} />
+      <InfoHint position={[0, 2.8, -14]} text="SCROLL TO THE END FOR A SURPRISE" />
 
       {/* Section banner — Experience */}
       <SectionBanner position={[0, 3.5, -22]} text="EXPERIENCE" />
@@ -68,9 +67,6 @@ export default function TunnelScene() {
           </SlidingPanel>
         )
       })}
-
-      {/* Hint — after projects, before arena */}
-      <InfoHint position={[0, 2.8, PROJECT_Z - PROJECTS.length * 6 - 3]} text="SCROLL TO THE END" />
 
       <ArenaDestination />
     </ScrollControls>

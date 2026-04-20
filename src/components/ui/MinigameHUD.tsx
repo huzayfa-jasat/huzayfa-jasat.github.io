@@ -1,4 +1,4 @@
-import { useMinigameState, startMinigame, exitMinigame } from '../../hooks/useMinigameStore'
+import { useMinigameState, startMinigame, exitMinigame, setHoveringUI } from '../../hooks/useMinigameStore'
 import { useArenaTheme } from '../../context/ArenaThemeContext'
 import { SPORT_CONFIGS } from '../../data/sportConfigs'
 import { useScrollProgress } from '../../hooks/useScrollStore'
@@ -102,6 +102,8 @@ export default function MinigameHUD() {
       {active && (
         <button
           onClick={() => exitMinigame()}
+          onMouseEnter={() => setHoveringUI(true)}
+          onMouseLeave={() => setHoveringUI(false)}
           style={{
             position: 'absolute',
             bottom: 30,

@@ -56,6 +56,10 @@ export function resetAim() {
   notify()
 }
 
+let _hoveringUI = false
+export function setHoveringUI(v: boolean) { _hoveringUI = v }
+export function isHoveringUI() { return _hoveringUI }
+
 const _targetWorldPos = { x: 0, y: 0, z: 0 }
 export function setTargetWorldPos(x: number, y: number, z: number) {
   _targetWorldPos.x = x
