@@ -28,8 +28,8 @@ export const PROFILE: Profile = {
   title: 'Software Engineer',
   overall: 99,
   details: [
-    { label: 'Position', value: 'Mechatronics Engineering' },
-    { label: 'Program', value: 'University of Waterloo' },
+    { label: 'Program', value: 'Mechatronics Engineering' },
+    { label: 'School', value: 'University of Waterloo' },
     { label: 'Languages', value: 'Python · Java · C++ · TypeScript · JavaScript · HTML/CSS' },                                                                     
     { label: 'Frameworks', value: 'React · Flask · Node.js · Three.js · ROS' },                                                                                 
     { label: 'Tools', value: 'PostgreSQL · MySQL · Redis · Firebase · AWS · Docker'},      
@@ -107,6 +107,7 @@ export const PROJECTS: Project[] = [
     description:
       'AI-powered tool that analyzes and optimizes code performance, reducing execution time by 82% and memory usage by 40%.',
     tags: ['Python', 'Streamlit', 'Google Gemini API', 'Matplotlib'],
+    github: 'https://github.com/huzayfa-jasat/AI-Powered-Code-Optimizer',
   },
   {
     name: 'Auto Pet Feeder',
@@ -114,6 +115,7 @@ export const PROJECTS: Project[] = [
     description:
       'EV3 robotics system using ultrasonic and sound sensors to identify pets and dispense tailored food portions with 98% accuracy.',
     tags: ['EV3 Robotics', 'RobotC', 'Ultrasonic Sensors'],
+    github: 'https://github.com/huzayfa-jasat/Automated-Pet-Feeder',
   },
   {
     name: 'Smart Walking Stick',
@@ -121,5 +123,6 @@ export const PROJECTS: Project[] = [
     description:
       'Arduino-powered mobility aid with 180° obstacle detection, delivering real-time audio and vibration feedback within 0.5 seconds at 95% accuracy.',
     tags: ['Arduino', 'TinkerCAD', 'Motion Sensors'],
+    github: 'https://github.com/huzayfa-jasat/Smart-Walking-Stick',
   },
 ]

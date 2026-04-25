@@ -96,7 +96,7 @@ export default function ProjectPanel({ project, position, rotation }: ProjectPan
       {/* Website link */}
       {project.website && (
         <group
-          position={[PANEL_WIDTH / 2 - 1.45, PANEL_HEIGHT / 2 - 0.65, 0.05]}
+          position={[PANEL_WIDTH / 2 - 1.40, PANEL_HEIGHT / 2 - 0.65, 0.05]}
           onClick={handleWebsiteClick}
           onPointerOver={(e: ThreeEvent<PointerEvent>) => { e.stopPropagation(); document.body.style.cursor = 'pointer' }}
           onPointerOut={() => { document.body.style.cursor = '' }}

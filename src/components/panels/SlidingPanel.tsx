@@ -12,8 +12,8 @@ interface SlidingPanelProps {
 
 const APPROACH_START = 14
 const APPROACH_END = 5
-const DEPART_START = -2
-const DEPART_END = -8
+const DEPART_START = 3
+const DEPART_END = -4
 
 function smoothstep(t: number): number {
   const clamped = Math.max(0, Math.min(1, t))
@@ -22,6 +22,7 @@ function smoothstep(t: number): number {
 
 export default function SlidingPanel({ wallX, wallRotationY, y, z, children }: SlidingPanelProps) {
   const groupRef = useRef<THREE.Group>(null)
+  const baseOpacities = useRef(new WeakMap<THREE.Material, number>())
   const { camera } = useThree()
 
   useFrame(() => {
@@ -47,6 +48,17 @@ export default function SlidingPanel({ wallX, wallRotationY, y, z, children }: S
 
     groupRef.current.position.set(x, y, z)
     groupRef.current.rotation.set(0, rotY, 0)
+
+    groupRef.current.traverse((child) => {
+      if ((child as THREE.Mesh).isMesh) {
+        const mat = (child as THREE.Mesh).material as THREE.Material
+        if (!baseOpacities.current.has(mat)) {
+          baseOpacities.current.set(mat, mat.opacity)
+        }
+        mat.transparent = true
+        mat.opacity = (baseOpacities.current.get(mat) ?? 1) * t
+      }
+    })
   })
 
   return (
